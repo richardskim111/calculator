@@ -31,7 +31,7 @@ jobs:
   #       run: |
   #         pytest
   
-  run-documentation:
+  build-documentation:
     runs-on: ubuntu-latest
     # needs: test-python
     steps:
@@ -50,3 +50,9 @@ jobs:
       - name: Run DocTests
         run: |
           python -m doctest src/calculator/calculations.py
+      - name: Build Documentation
+        run: |
+          mkdocs build
+      - name: Publish Documentation
+        run: |
+          mkdocs gh-deploy
