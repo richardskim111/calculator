@@ -50,9 +50,5 @@ jobs:
       - name: Run DocTests
         run: |
           python -m doctest src/calculator/calculations.py
-      - name: Build Documentation
-        run: |
-          mkdocs build
-      - name: Publish Documentation
-        run: |
-          mkdocs gh-deploy
+      - name: Build and publish documentation
+        uses: Tangerine-Community/tangy-mkdocs-build-action@v1
