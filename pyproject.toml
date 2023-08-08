@@ -19,7 +19,16 @@ keywords = ["calculator"]
 requires-python = ">=3.8"
 
 [project.optional-dependencies]
-dev = ["black", "bumpver", "isort", "pip-tools", "pytest"]
+dev = [
+    "black", 
+    "bumpver", 
+    "isort", 
+    "pip-tools", 
+    "pytest",
+    "mkdocs", 
+    "mkdocstrings[python]", 
+    "mkdocs-material"
+]
 
 [project.urls]
 Homepage = "https://github.com/richardskim111/calculator"
